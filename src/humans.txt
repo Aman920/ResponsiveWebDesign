@@ -1,0 +1,1 @@
+这个文件相较于robots.txt 就是给人看的了，相关的推荐规范可以参考www.humanstxt.org.cn

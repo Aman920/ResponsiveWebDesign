@@ -1,0 +1,12 @@
+# editorconfig.org
+
+# 用于统一代码工具、解决方案的文件，帮助开发者在不同编辑器保持统一的代码风格,详情可访问editorconfig.org查看
+
+[*]
+charset = utf-8
+indent_size = 4
+indent_style = space
+trim_trailing_whitespace = true
+
+[*.md]
+trim_trailing_whitespace = false
