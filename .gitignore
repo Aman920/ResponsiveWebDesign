@@ -1,0 +1,9 @@
+# 说明哪些文件不需要添加到版本管理
+
+*~
+.DS_Store
+
+.idea
+
+node_modules
+dist
