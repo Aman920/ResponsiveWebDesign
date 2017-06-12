@@ -1,0 +1,243 @@
+/*************
+* 页面样式
+ ************/
+
+/* ==========
+* 基本默认值
+ =========*/
+
+html{
+    font-size: 62.5%;
+    color: #222;
+}
+
+/*设置页面中文字被选中的样式*/
+::selection{
+    background-color: #6dfc54;
+    tet-shadow: none;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    list-style:none;
+}
+
+/* ============
+    工具样式
+ =============*/
+.center-block{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.pull-right{
+    float: right !important;
+}
+
+.pull-left{
+    float: left !important;
+}
+
+.text-right{
+    text-align: right !important;
+}
+
+.text-left{
+    text-align: left !important;
+}
+
+.text-center{
+    text-align: center !important;
+}
+
+.hide{
+    display: none !important;
+}
+
+.show{
+    display: block !important;
+}
+
+.invisible{
+    visibility: hidden;
+}
+
+.text-hide{
+    font: 0/0 a;
+    color: transparent;
+    text-shadow: none;
+    background-color: transparent;
+    border: 0;
+}
+
+/*这里的before可用于解决margin塌陷的问题，据说也是业界比较常用的做法*/
+.clearfix:before,
+.clearfix:after{
+    content: '';
+    display: table;
+}
+
+.clearfix:after{
+    clear: both;
+}
+
+/* ==============
+    自动以页面样式
+ ===============*/
+
+body{
+    font-size: 1.2rem;
+    line-height: 1.5;
+    background-color: white;
+}
+
+a{
+    color: #666;
+    text-decoration: none;
+}
+
+a:hover,a:active{
+    color: #0ae;
+    text-decoration: underline;
+}
+
+.page-title{
+    text-align: left;
+    margin: 5rem 0;
+    margin-left: 5%;
+    font-weight: bold;
+    color: #008CBA;
+}
+@media only screen and (max-width: 55rem){
+    .page-title{
+        text-align: center;
+    }
+}
+@media only screen and (max-width: 40rem){
+    .page-title{
+        margin: 2rem auto;
+    }
+}
+
+.main{
+    box-sizing: border-box;
+    margin: 0 auto;
+    width: 90%;
+    padding-left: 15%;
+    margin-bottom: 10rem;
+}
+.container{
+    position: relative;
+}
+.container:before{
+    position: absolute;
+    content: '';
+    width: 10px;
+    background: rgba(32, 167, 255, 0.67);
+    top: 0;
+    bottom: 0;
+}
+.item{
+    position: relative;
+}
+.item+.item{
+    margin-top: 20px;
+}
+.item .date{
+    position: absolute;
+    text-align: right;
+    top :0;
+    left: -20%;
+    margin: 0;
+    color: #c5c1c0;
+}
+
+.item .date span{
+    font-size: 4rem;
+    color: #00aaee;
+}
+@media only screen and (max-width: 55rem){
+    .item .date span{
+        font-size: 2rem;
+    }
+}
+@media only screen and (max-width: 40rem){
+    .main{
+        padding: 0;
+    }
+    .container:before{
+        display: none;
+    }
+    .item .date{
+        position: static;
+        margin-bottom: 2rem;
+        text-align: left;
+    }
+}
+
+.item .content{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 95%;
+    display: inline-block;
+    margin-left: 5%;
+    padding: 4rem;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    background: #00aaee;
+}
+.item .content:before{
+    position: absolute;
+    left: calc(5% - 2rem);
+    top: 1rem;
+    content: '';
+    border: 1rem solid transparent;
+    border-right: 1rem solid #00aaee;
+    display: inline-block;
+}
+.item:nth-child(odd) .content{
+    background: #a0d3e8;
+}
+.item:nth-child(odd) .content:before{
+    border-right: 1rem solid #a0d3e8;
+}
+.item .content+.content{
+    margin-top: 15px;
+}
+.item .content .title{
+    font-size: 2rem;
+    color: #fff;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #e3e5ff;
+}
+.item .content p{
+    font-size: 1.5rem;
+    color: #ddffdd;
+}
+
+@media only screen and (max-width: 40rem){
+    .item .content{
+        margin: 0;
+        width: 100%;
+    }
+    .item .content:before{
+        left: 1rem;
+        top: 5rem;
+        content: '';
+        border: 1rem solid transparent;
+        border-right: 1rem solid transparent;
+        border-bottom: 1rem solid #00aaee;
+        display: inline-block;
+    }
+    .item:nth-child(odd) .content:before{
+        border-right: 1rem solid transparent;
+        border-bottom: 1rem solid #a0d3e8;
+    }
+}
